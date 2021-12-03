@@ -9,7 +9,7 @@ var growthrate = 36
 
 func _process(delta):
 	if enemy != null:
-		print("true")
+		#print("true")
 		storage += enemy.weight
 		enemy.weight = 0
 		#print(weight)

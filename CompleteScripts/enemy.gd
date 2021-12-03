@@ -72,7 +72,7 @@ func _process(delta):
 				
 			else:
 				#print(weight)
-				print("true")
+				#print("true")
 				#print("change")
 				_change_state(STATES.HOME)
 		STATES.HOME:
@@ -88,7 +88,7 @@ func _process(delta):
 			if (weight != 0):
 				if nests != null:
 					
-					print("bruh")
+					#print("bruh")
 					move = position.direction_to(nests.position) * speed
 			
 				move = move.normalized()
