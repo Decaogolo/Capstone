@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Misc/extrude.tres" type="DynamicFont" id=1]
+[ext_resource path="res://CompleteScripts/Control.gd" type="Script" id=2]
+[ext_resource path="res://Misc/black.jpg" type="Texture" id=3]
+[ext_resource path="res://CompleteScripts/Popup.gd" type="Script" id=4]
+
+[node name="UI_Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 61.0
+margin_right = -16.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 427, 520 )
+scale = Vector2( 0.223849, 0.0876605 )
+texture = ExtResource( 3 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 228.0
+margin_top = 471.0
+margin_right = 634.0
+margin_bottom = 580.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="ToolButton" parent="HBoxContainer2"]
+margin_left = 49.0
+margin_right = 166.0
+margin_bottom = 109.0
+custom_fonts/font = ExtResource( 1 )
+text = "Mutations"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="HBoxContainer2"]
+margin_left = 170.0
+margin_right = 237.0
+margin_bottom = 109.0
+custom_fonts/font = ExtResource( 1 )
+text = "Stats"
+flat = true
+
+[node name="Button2" type="Button" parent="HBoxContainer2"]
+margin_left = 241.0
+margin_right = 297.0
+margin_bottom = 109.0
+custom_fonts/font = ExtResource( 1 )
+text = "Save"
+flat = true
+
+[node name="ButtoN4" type="Button" parent="HBoxContainer2"]
+margin_left = 301.0
+margin_right = 357.0
+margin_bottom = 109.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+flat = true
+
+[node name="Popup" type="PopupMenu" parent="."]
+margin_left = 230.0
+margin_top = 178.0
+margin_right = 595.0
+margin_bottom = 368.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="HBoxContainer2/Button4" to="Popup" method="_on_Button4_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="HBoxContainer2/ButtoN4" to="." method="_on_ButtoN4_pressed"]

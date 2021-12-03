@@ -1,0 +1,128 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Misc/extrude.tres" type="DynamicFont" id=1]
+[ext_resource path="res://CompleteScripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/glowing-blue-cell-1186459.jpg" type="Texture" id=3]
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 414.5, 320.5 )
+scale = Vector2( 0.770446, 0.656058 )
+texture = ExtResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 830.0
+margin_bottom = 640.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 316.0
+margin_top = 274.0
+margin_right = 513.0
+margin_bottom = 366.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 197.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 20.0
+margin_right = 176.0
+margin_bottom = 20.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Life Simulation"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 197.0
+margin_bottom = 92.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_right = 197.0
+margin_bottom = 68.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 197.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_right = 197.0
+margin_bottom = 20.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 22.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 22, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = ">"
+
+[node name="Start" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 26.0
+margin_right = 197.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 171, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 24.0
+margin_right = 197.0
+margin_bottom = 44.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
+margin_right = 197.0
+margin_bottom = 20.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 22.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 22, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = ">"
+
+[node name="Start" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_left = 26.0
+margin_right = 197.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 171, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "option"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 48.0
+margin_right = 197.0
+margin_bottom = 68.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+margin_right = 197.0
+margin_bottom = 20.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 22.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 22, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = ">"
+
+[node name="Start" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_left = 26.0
+margin_right = 197.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 171, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "quit"
