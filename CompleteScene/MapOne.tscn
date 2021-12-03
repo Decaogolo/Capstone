@@ -747,9 +747,7 @@ margin_bottom = 88.0
 position = Vector2( 222, 304 )
 
 [node name="enemy" parent="." instance=ExtResource( 7 )]
-visible = false
 position = Vector2( 669, 139 )
 
 [node name="EnemyNest" parent="." instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 716, 101 )
