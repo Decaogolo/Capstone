@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Misc/extrude.tres" type="DynamicFont" id=1]
+[ext_resource path="res://CompleteScene/n1204995.jpg" type="Texture" id=2]
+[ext_resource path="res://CompleteScene/saveMenu.gd" type="Script" id=3]
+
+[node name="loadSystem" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 370, 313 )
+texture = ExtResource( 2 )
+
+[node name="saveMenu" type="PopupDialog" parent="."]
+margin_left = 249.0
+margin_top = 267.0
+margin_right = 553.0
+margin_bottom = 491.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBox" type="SpinBox" parent="saveMenu"]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 202.0
+margin_bottom = 56.0
+
+[node name="Button" type="Button" parent="saveMenu"]
+margin_left = 48.0
+margin_top = 112.0
+margin_right = 256.0
+margin_bottom = 144.0
+custom_fonts/font = ExtResource( 1 )
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="saveMenu"]
+margin_left = 64.0
+margin_top = 16.0
+margin_right = 128.0
+margin_bottom = 80.0
+custom_fonts/font = ExtResource( 1 )
+text = "ID"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 91.0
+margin_top = 503.0
+margin_right = 762.0
+margin_bottom = 558.0
+custom_fonts/font = ExtResource( 1 )
+text = "Select file"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainMenu" type="Button" parent="."]
+margin_left = 93.0
+margin_top = 574.0
+margin_right = 762.0
+margin_bottom = 623.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="saveMenu/Button" to="saveMenu" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="saveMenu" method="_on_Button_pressed"]
+[connection signal="pressed" from="mainMenu" to="saveMenu" method="_on_Button3_pressed"]
