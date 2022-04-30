@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CompleteScene/SelectionMenu.gd" type="Script" id=1]
+[ext_resource path="res://Misc/extrude.tres" type="DynamicFont" id=2]
+
+[node name="SelectionMenu" type="PopupDialog"]
+margin_left = 160.0
+margin_top = 80.0
+margin_right = 480.0
+margin_bottom = 272.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MutationOne" type="Button" parent="."]
+margin_left = 48.0
+margin_top = 64.0
+margin_right = 128.0
+margin_bottom = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MutationTwo" type="Button" parent="."]
+margin_left = 48.0
+margin_top = 112.0
+margin_right = 128.0
+margin_bottom = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MutationThree" type="Button" parent="."]
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 272.0
+margin_bottom = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MutationFour" type="Button" parent="."]
+margin_left = 192.0
+margin_top = 112.0
+margin_right = 272.0
+margin_bottom = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 16.0
+margin_right = 272.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 2 )
+text = "Choose a mutation"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MutationOne" to="." method="_on_MutationOne_pressed"]
+[connection signal="pressed" from="MutationTwo" to="." method="_on_MutationTwo_pressed"]
+[connection signal="pressed" from="MutationThree" to="." method="_on_MutationThree_pressed"]
+[connection signal="pressed" from="MutationFour" to="." method="_on_MutationFour_pressed"]
